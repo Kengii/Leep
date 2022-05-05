@@ -30,6 +30,11 @@
 		7F52151E2822F6E900CA1143 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52151D2822F6E900CA1143 /* ReviewVC.swift */; };
 		7F5215202822F88E00CA1143 /* CeatingAButtonForDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52151F2822F88E00CA1143 /* CeatingAButtonForDetailVC.swift */; };
 		7F5215222822F8B200CA1143 /* CreatingImageForCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5215212822F8B200CA1143 /* CreatingImageForCell.swift */; };
+		7F52152428240F4200CA1143 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52152328240F4200CA1143 /* Recording.swift */; };
+		7F5215262824317B00CA1143 /* CreateAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5215252824317B00CA1143 /* CreateAlert.swift */; };
+		7F5215292824332A00CA1143 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7F5215282824332A00CA1143 /* SwiftEntryKit */; };
+		7F52152B2824355F00CA1143 /* MyCustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52152A2824355F00CA1143 /* MyCustomAlertView.swift */; };
+		7F52152D28243ECB00CA1143 /* UIView + Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52152C28243ECB00CA1143 /* UIView + Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,10 @@
 		7F52151D2822F6E900CA1143 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		7F52151F2822F88E00CA1143 /* CeatingAButtonForDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeatingAButtonForDetailVC.swift; sourceTree = "<group>"; };
 		7F5215212822F8B200CA1143 /* CreatingImageForCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingImageForCell.swift; sourceTree = "<group>"; };
+		7F52152328240F4200CA1143 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		7F5215252824317B00CA1143 /* CreateAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlert.swift; sourceTree = "<group>"; };
+		7F52152A2824355F00CA1143 /* MyCustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomAlertView.swift; sourceTree = "<group>"; };
+		7F52152C28243ECB00CA1143 /* UIView + Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Message.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5215292824332A00CA1143 /* SwiftEntryKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +203,8 @@
 				7F5215122822E5C900CA1143 /* CreatingImageDetail.swift */,
 				7F52151F2822F88E00CA1143 /* CeatingAButtonForDetailVC.swift */,
 				7F5215212822F8B200CA1143 /* CreatingImageForCell.swift */,
+				7F52152328240F4200CA1143 /* Recording.swift */,
+				7F521530282465E400CA1143 /* Alert */,
 			);
 			path = Creating;
 			sourceTree = "<group>";
@@ -204,6 +216,16 @@
 				7F5215172822E79100CA1143 /* DrawAsImage.swift */,
 			);
 			path = DrawServices;
+			sourceTree = "<group>";
+		};
+		7F521530282465E400CA1143 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				7F5215252824317B00CA1143 /* CreateAlert.swift */,
+				7F52152A2824355F00CA1143 /* MyCustomAlertView.swift */,
+				7F52152C28243ECB00CA1143 /* UIView + Message.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +244,9 @@
 			dependencies = (
 			);
 			name = Leep;
+			packageProductDependencies = (
+				7F5215282824332A00CA1143 /* SwiftEntryKit */,
+			);
 			productName = Leep;
 			productReference = 7F5214D82822DEA200CA1143 /* Leep.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +275,9 @@
 				Base,
 			);
 			mainGroup = 7F5214CF2822DEA200CA1143;
+			packageReferences = (
+				7F5215272824332A00CA1143 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+			);
 			productRefGroup = 7F5214D92822DEA200CA1143 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -283,13 +311,17 @@
 				7F5214DC2822DEA200CA1143 /* AppDelegate.swift in Sources */,
 				7F52151A2822E7B500CA1143 /* ModelLine.swift in Sources */,
 				7F5214F42822DFF900CA1143 /* MainCollectionViewController.swift in Sources */,
+				7F52152428240F4200CA1143 /* Recording.swift in Sources */,
 				7F52151E2822F6E900CA1143 /* ReviewVC.swift in Sources */,
 				7F52151C2822F0B900CA1143 /* DetailVC.swift in Sources */,
+				7F5215262824317B00CA1143 /* CreateAlert.swift in Sources */,
 				7F5215222822F8B200CA1143 /* CreatingImageForCell.swift in Sources */,
 				7F5215202822F88E00CA1143 /* CeatingAButtonForDetailVC.swift in Sources */,
 				7F5215072822E14700CA1143 /* NetworkService.swift in Sources */,
 				7F52150A2822E25100CA1143 /* Constants.swift in Sources */,
 				7F5215162822E76400CA1143 /* Draw.swift in Sources */,
+				7F52152D28243ECB00CA1143 /* UIView + Message.swift in Sources */,
+				7F52152B2824355F00CA1143 /* MyCustomAlertView.swift in Sources */,
 				7F5214DE2822DEA200CA1143 /* SceneDelegate.swift in Sources */,
 				7F5214F72822E03700CA1143 /* CustomCollectionViewCell.swift in Sources */,
 				7F5214FC2822E0B900CA1143 /* ModelImageDetail.swift in Sources */,
@@ -518,6 +550,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F5215272824332A00CA1143 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F5215282824332A00CA1143 /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F5215272824332A00CA1143 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F5214D02822DEA200CA1143 /* Project object */;
 }

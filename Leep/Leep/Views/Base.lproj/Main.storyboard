@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Leep-->
+        <!--Main Collection View Controller-->
         <scene sceneID="F7c-YV-JVS">
             <objects>
                 <collectionViewController id="1IH-f3-bo8" customClass="MainCollectionViewController" customModule="Leep" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lZ7-hb-TfB">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ccr-Ms-S36">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -35,9 +35,21 @@
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WxQ-y1-9y7">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5E-tk-VFF">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="t5E-tk-VFF" secondAttribute="bottom" id="2wh-mj-llB"/>
+                                        <constraint firstItem="t5E-tk-VFF" firstAttribute="leading" secondItem="WxQ-y1-9y7" secondAttribute="leading" id="5l1-BG-aaJ"/>
+                                        <constraint firstItem="t5E-tk-VFF" firstAttribute="top" secondItem="WxQ-y1-9y7" secondAttribute="top" id="hDs-jY-IDT"/>
+                                        <constraint firstAttribute="trailing" secondItem="t5E-tk-VFF" secondAttribute="trailing" id="qf6-Wc-6QC"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <outlet property="viewImage" destination="WxQ-y1-9y7" id="KnX-NU-obw"/>
+                                    <outlet property="viewImage" destination="t5E-tk-VFF" id="2yH-As-HM2"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -46,7 +58,7 @@
                             <outlet property="delegate" destination="1IH-f3-bo8" id="fEg-cG-t2K"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Leep" id="Cnt-XO-URI"/>
+                    <navigationItem key="navigationItem" id="Cnt-XO-URI"/>
                     <connections>
                         <segue destination="512-Ek-Yev" kind="show" identifier="ShowDetail" id="6Xn-T4-HeN"/>
                     </connections>

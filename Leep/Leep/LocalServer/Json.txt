@@ -65,7 +65,6 @@
 "imageFactorForCellH1": 0.05,
 "imageFactorForCellW1": 1,
 "imageFactorForCellX1": 0
-
 },
 },
 {
@@ -150,7 +149,7 @@
 "imageNamed1": "12",
 },
 "imageAnimation": {
-    "imageScale1": 0.5,
+"imageScale1": 0.5,
 },
 "imageFactor" : {
 "factorX1": 0,
@@ -170,7 +169,7 @@
 "imageNamed1": "16",
 },
 "imageAnimation": {
-    "imageScale2": 2,
+"imageScale2": 2,
 },
 "imageFactor" : {
 "factorX1": 0,
@@ -187,19 +186,51 @@
 {
 "id": 7,
 "imageNames": {
-"imageNamed1": "16",
-"imageNamed2": "17",
-"imageNamed3": "18",
-"imageNamed4": "19",
+"imageNamed1": "17",
+},
+"imageAnimation": {
+"imageScale3": 2,
+    "imageScale1": 0,
+},
+"imageFactor" : {
+"factorX1": 0,
+"factorY1": 0.05,
+"factorH1": 0.70,
+"factorW1": 1,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 0.7,
+"imageFactorForCellW1": 1,
+"imageFactorForCellX1": 0
 },
 },
 {
 "id": 8,
 "imageNames": {
-"imageNamed1": "16",
-"imageNamed2": "17",
-"imageNamed3": "18",
-"imageNamed4": "19",
+"imageNamed1": "13",
+"imageNamed2": "14",
+},
+"imageAnimation": {
+    "imageWidth1Anim": 377,
+    "imageWidth2Anim": -377,
+},
+"imageFactor" : {
+    "factorX1": 0,
+    "factorY1": 0,
+    "factorH1": 0.8,
+    "factorW1": 0.5,
+    "factorX2": 0.5,
+    "factorY2": 0,
+    "factorH2": 0.8,
+    "factorW2": 0.5,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 0.8,
+"imageFactorForCellH2": 0.8,
+"imageFactorForCellW1": 0,
+"imageFactorForCellW2": 1,
+"imageFactorForCellX1": 0,
+"imageFactorForCellX2": 0
 },
 },
 ]

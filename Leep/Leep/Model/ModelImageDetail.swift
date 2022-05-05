@@ -17,6 +17,7 @@ struct ImageDetail: Decodable {
 }
 
 struct ImageNames: Decodable {
+    
     var imageNamed1: String?
     var imageNamed2: String?
     var imageNamed3: String?
@@ -24,6 +25,7 @@ struct ImageNames: Decodable {
 }
 
 struct ImageAnimation: Decodable {
+    
     var imageHeight1Anim: Float?
     var imageHeight2Anim: Float?
     var imageHeight3Anim: Float?
@@ -37,9 +39,12 @@ struct ImageAnimation: Decodable {
     var imageAlpha3Anim: Float?
     var imageScale1: Float?
     var imageScale2: Float?
+    var imageScale3: Float?
+    
 }
 
 struct ImageFactor: Decodable {
+    
     var factorX1: Double?
     var factorX2: Double?
     var factorX3: Double?
@@ -59,6 +64,7 @@ struct ImageFactor: Decodable {
 }
 
 struct ImageFactorForCell: Decodable {
+    
     var imageFactorForCellH1: Double?
     var imageFactorForCellH2: Double?
     var imageFactorForCellH3: Double?

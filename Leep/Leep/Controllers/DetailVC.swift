@@ -18,6 +18,7 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var drawView: Draw!
 
     var image: ImageDetail?
+    var text: MyCustomAlertView?
     private var imageView: UIImageView?
     private var imageView1: UIImageView?
     private var imageView2: UIImageView?
@@ -64,21 +65,27 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
     @IBAction func editTextAction(_ sender: Any) {
         firstPlan()
         myTextLabel.isHidden.toggle()
-        let alertController = UIAlertController(title: "Add Text", message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.addTextField { (textField: UITextField!) -> Void in
-            textField.placeholder = "Enter Your Text"
+//        let alertController = UIAlertController(title: "Add Text", message: "", preferredStyle: UIAlertController.Style.alert)
+//        alertController.addTextField { (textField: UITextField!) -> Void in
+////            textField.placeholder = "Enter Your Text"
+//        }
+//        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+//            let firstTextField = alertController.textFields![0] as UITextField
+//            self.myTextLabel.text = firstTextField.text
+//        })
+//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
+//            (action: UIAlertAction!) -> Void in })
+//
+//        alertController.addAction(saveAction)
+//        alertController.addAction(cancelAction)
+//
+//        self.present(alertController, animated: true, completion: nil)
+        
+        CreateAlert.shared.createAlert() {[weak self] text in
+            print(text)
+            self?.text?.text = self?.myTextLabel.text ?? ""
         }
-        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
-            let firstTextField = alertController.textFields![0] as UITextField
-            self.myTextLabel.text = firstTextField.text
-        })
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
-            (action: UIAlertAction!) -> Void in })
-
-        alertController.addAction(saveAction)
-        alertController.addAction(cancelAction)
-
-        self.present(alertController, animated: true, completion: nil)
+        
     }
 
     @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
@@ -212,6 +219,8 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
         }
     }
 }
+
+// MARK: - Extensions
 
 extension DetailVC: UIImagePickerControllerDelegate {
     func chooseImagePicker (source: UIImagePickerController.SourceType) {
