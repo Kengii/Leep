@@ -40,6 +40,7 @@ struct ImageAnimation: Decodable {
     var imageScale1: Float?
     var imageScale2: Float?
     var imageScale3: Float?
+    var angel: Float?
     
 }
 

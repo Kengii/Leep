@@ -7,18 +7,17 @@
 
 import UIKit
 
-class DetailVC: UIViewController, UINavigationControllerDelegate {
+final class DetailVC: UIViewController, UINavigationControllerDelegate {
 
-    @IBOutlet weak var viewIm: UIView!
-    @IBOutlet weak var myTextLabel: UILabel!
-    @IBOutlet weak var mySlider: UISlider!
-    @IBOutlet weak var myStackColorBtns: UIStackView!
-    @IBOutlet weak var clearBtn: UIButton!
-    @IBOutlet weak var undoBtn: UIButton!
-    @IBOutlet weak var drawView: Draw!
+    @IBOutlet weak private var viewIm: UIView!
+    @IBOutlet weak private var myTextLabel: UILabel!
+    @IBOutlet weak private var mySlider: UISlider!
+    @IBOutlet weak private var myStackColorBtns: UIStackView!
+    @IBOutlet weak private var clearBtn: UIButton!
+    @IBOutlet weak private var undoBtn: UIButton!
+    @IBOutlet weak private var drawView: Draw!
 
     var image: ImageDetail?
-    var text: MyCustomAlertView?
     private var imageView: UIImageView?
     private var imageView1: UIImageView?
     private var imageView2: UIImageView?
@@ -34,26 +33,25 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - @IBAction
 
-    @IBAction func slideValueAction(_ sender: UISlider) {
+    @IBAction private func slideValueAction(_ sender: UISlider) {
         drawView.setStrokeWidth(width: mySlider.value)
     }
 
-    @IBAction func clearBtn(_ sender: UIButton) {
+    @IBAction private func clearBtn(_ sender: UIButton) {
         drawView.clear()
     }
 
-    @IBAction func undoBtn(_ sender: UIButton) {
+    @IBAction private func undoBtn(_ sender: UIButton) {
         drawView.undo()
     }
 
-    @IBAction func colorBtns(_ sender: UIButton) {
+    @IBAction private func colorBtns(_ sender: UIButton) {
         drawView.setStrokeColor(color: sender.backgroundColor ?? .black)
         mySlider.tintColor = sender.backgroundColor ?? .black
         mySlider.thumbTintColor = sender.backgroundColor ?? .black
     }
 
-
-    @IBAction func drawAction(_ sender: UIBarButtonItem) {
+    @IBAction private func drawAction(_ sender: UIBarButtonItem) {
         firstPlan()
         drawView.isHidden.toggle()
         myStackColorBtns.isHidden.toggle()
@@ -62,33 +60,16 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
         mySlider.isHidden.toggle()
     }
 
-    @IBAction func editTextAction(_ sender: Any) {
+    @IBAction private func editTextAction(_ sender: Any) {
         firstPlan()
         myTextLabel.isHidden.toggle()
-//        let alertController = UIAlertController(title: "Add Text", message: "", preferredStyle: UIAlertController.Style.alert)
-//        alertController.addTextField { (textField: UITextField!) -> Void in
-////            textField.placeholder = "Enter Your Text"
-//        }
-//        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
-//            let firstTextField = alertController.textFields![0] as UITextField
-//            self.myTextLabel.text = firstTextField.text
-//        })
-//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
-//            (action: UIAlertAction!) -> Void in })
-//
-//        alertController.addAction(saveAction)
-//        alertController.addAction(cancelAction)
-//
-//        self.present(alertController, animated: true, completion: nil)
-        
-        CreateAlert.shared.createAlert() {[weak self] text in
-            print(text)
-            self?.text?.text = self?.myTextLabel.text ?? ""
+
+        CreateAlert.shared.createAlert() { text in
+            self.myTextLabel.text = text
         }
-        
     }
 
-    @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+    @IBAction private func handlePan(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self.view)
         if let view = sender.view {
             view.center = CGPoint(x: view.center.x + translation.x,
@@ -97,14 +78,14 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
         sender.setTranslation(CGPoint.zero, in: self.view)
     }
 
-    @IBAction func handlePinch(_ sender: UIPinchGestureRecognizer) {
+    @IBAction private func handlePinch(_ sender: UIPinchGestureRecognizer) {
         if let view = sender.view {
             view.transform = view.transform.scaledBy(x: sender.scale, y: sender.scale)
             sender.scale = 1
         }
     }
 
-    @IBAction func handleRotation(_ sender: UIRotationGestureRecognizer) {
+    @IBAction private func handleRotation(_ sender: UIRotationGestureRecognizer) {
         if let view = sender.view {
             view.transform = view.transform.rotated(by: sender.rotation)
             sender.rotation = 0
@@ -162,7 +143,6 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
         viewIm.addSubview(myButton4)
         myButton4.tag = 3
     }
-
 
     @objc private func buttonAction(_ sender: UIButton) {
         switch sender.tag {

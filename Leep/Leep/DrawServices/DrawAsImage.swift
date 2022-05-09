@@ -7,7 +7,7 @@
 
 import PhotosUI
 
-class DrawAsImage {
+final class DrawAsImage {
     static let shared = DrawAsImage()
 
     private init() { }

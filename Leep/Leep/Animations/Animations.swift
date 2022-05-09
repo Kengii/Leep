@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Animations {
+final class Animations {
     static let shared = Animations()
 
     private init() { }
@@ -32,11 +32,9 @@ class Animations {
                 imageView?.transform = CGAffineTransform(scaleX: CGFloat(animations.imageAnimation?.imageScale1 ?? 1), y: CGFloat(animations.imageAnimation?.imageScale1 ?? 1))
 
                 imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(animations.imageAnimation?.imageScale2 ?? 0))
-            let d: Double = 90
-            let angel = CGFloat(d * Double.pi / 90)
-            imageView?.layer.transform = CATransform3DMakeRotation(angel, 0, CGFloat(animations.imageAnimation?.imageScale3 ?? 0), 0)
-
-            
+                let d: Double = 90
+                let angel = CGFloat(d * Double.pi / 90)
+                imageView?.layer.transform = CATransform3DMakeRotation(angel, 0, CGFloat(animations.imageAnimation?.imageScale3 ?? 0), 0)
             })
     }
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Draw: UIView {
+final class Draw: UIView {
 
     private var lines = [Line]()
     private var strokeColor = UIColor.black

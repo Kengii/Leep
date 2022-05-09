@@ -10,7 +10,7 @@ import SwiftEntryKit
 
 // MARK: - UILabel
 extension UILabel {
-    
+
     var style: EKProperty.LabelStyle {
         set {
             font = newValue.font
@@ -20,12 +20,12 @@ extension UILabel {
         }
         get {
             return EKProperty.LabelStyle(font: font,
-                                         color: EKColor(textColor),
-                                         alignment: textAlignment,
-                                         numberOfLines: numberOfLines)
+                color: EKColor(textColor),
+                alignment: textAlignment,
+                numberOfLines: numberOfLines)
         }
     }
-    
+
     var content: EKProperty.LabelContent {
         set {
             text = newValue.text
@@ -69,19 +69,19 @@ extension UIImageView {
                 }
                 animationDuration = newValue.imageSequenceAnimationDuration
             }
-            
+
             contentMode = newValue.contentMode
             tintColor = newValue.tint?.color(for: traitCollection,
-                                             mode: newValue.displayMode)
+                mode: newValue.displayMode)
             accessibilityIdentifier = newValue.accessibilityIdentifier
-            
+
             if let size = newValue.size {
                 set(.width, of: size.width)
                 set(.height, of: size.height)
             } else {
                 forceContentWrap()
             }
-            
+
             if newValue.makesRound {
                 clipsToBounds = true
                 if let size = newValue.size {
@@ -91,22 +91,22 @@ extension UIImageView {
                     layer.cornerRadius = min(bounds.width, bounds.height) * 0.5
                 }
             }
-            
+
             startAnimating()
-            
+
             if case .animate(duration: let duration,
-                             options: let options,
-                             transform: let transform) = newValue.animation {
+                options: let options,
+                transform: let transform) = newValue.animation {
                 let options: UIView.AnimationOptions = [.repeat, .autoreverse, options]
                 // A hack that forces the animation to run on the main thread,
                 // on one of the next run loops
                 DispatchQueue.main.async {
                     UIView.animate(withDuration: duration,
-                                   delay: 0,
-                                   options: options,
-                                   animations: {
-                        self.transform = transform
-                    }, completion: nil)
+                        delay: 0,
+                        options: options,
+                        animations: {
+                            self.transform = transform
+                        }, completion: nil)
                 }
             }
         }
@@ -118,14 +118,14 @@ extension UIImageView {
 
 // MARK: - UITextField
 extension UITextField {
-    
+
     var placeholder: EKProperty.LabelContent {
         set {
             attributedPlaceholder = NSAttributedString(
                 string: newValue.text,
                 attributes: [
-                    .font: newValue.style.font,
-                    .foregroundColor: newValue.style.color(for: traitCollection)
+                        .font: newValue.style.font,
+                        .foregroundColor: newValue.style.color(for: traitCollection)
                 ]
             )
         }
@@ -133,7 +133,7 @@ extension UITextField {
             fatalError("placeholder doesn't have a getter")
         }
     }
-    
+
     var textFieldContent: EKProperty.TextFieldContent {
         set {
             placeholder = newValue.placeholder

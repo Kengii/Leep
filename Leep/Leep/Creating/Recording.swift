@@ -8,7 +8,7 @@
 import UIKit
 import ReplayKit
 
-class Recording {
+final class Recording {
 
     static let shared = Recording()
 
@@ -24,28 +24,6 @@ class Recording {
                     print("error")
                 }
             })
-        }
-    }
-    
-    func stopRecording(priviewCntrl: RPPreviewViewController, complition: @escaping () -> ()) {
-        if RPScreenRecorder.shared().isAvailable == true {
-            RPScreenRecorder.shared().stopRecording { [weak self] (priviewCntrl, error) in
-                if priviewCntrl != nil {
-                    _ = UIAlertController(title: "Recording", message: "Do you wish to discard or view your gameplay recording?", preferredStyle: .alert)
-
-                    _ = UIAlertAction(title: "Discard", style: .default) { (action: UIAlertAction) in
-                        RPScreenRecorder.shared().discardRecording {
-                            print("Good")
-                        }
-                    }
-
-//                    priviewCntrl?.previewControllerDelegate = self as! RPPreviewViewControllerDelegate
-                    priviewCntrl?.modalPresentationStyle = .overFullScreen
-                    
-                    complition()
-
-                }
-            }
         }
     }
 }

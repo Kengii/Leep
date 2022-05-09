@@ -8,7 +8,7 @@
 import UIKit
 import ReplayKit
 
-class ReviewVC: UIViewController, RPPreviewViewControllerDelegate {
+final class ReviewVC: UIViewController, RPPreviewViewControllerDelegate {
 
     var image: ImageDetail?
     var image1: UIImage?
@@ -16,34 +16,35 @@ class ReviewVC: UIViewController, RPPreviewViewControllerDelegate {
     var image3: UIImage?
     var image4: UIImage?
     var image5: UIImage?
-    
+
     private var imageView: UIImageView?
     private var imageView1: UIImageView?
     private var imageView2: UIImageView?
     private var imageView3: UIImageView?
     private var imageView4: UIImageView?
-    
+
     private var timer = Timer()
     private var time: Float = 0
-    
+
     var textsLabel: String?
     var x: CGFloat?
     var y: CGFloat?
     var width: CGFloat?
     var height: CGFloat?
     var label: UILabel?
-    
 
-    @IBOutlet weak var viewImage: UIView!
+    @IBOutlet weak private var viewImage: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         Recording.shared.startRecording { [weak self] in
             print("start")
-                                self?.timer = Timer.scheduledTimer(timeInterval: 6, target: self as Any, selector: #selector(self?.updateProgressTime), userInfo: nil, repeats: false)
-                                Animations.shared.animateImage(imageView: self?.imageView, imageView1: self?.imageView1, imageView2: self?.imageView2, imageView3: self?.imageView3, image: self?.image, factorReview: 2, label: self?.label)
+            self?.timer = Timer.scheduledTimer(timeInterval: 6, target: self as Any, selector: #selector(self?.updateProgressTime), userInfo: nil, repeats: false)
+            Animations.shared.animateImage(imageView: self?.imageView, imageView1: self?.imageView1, imageView2: self?.imageView2, imageView3: self?.imageView3, image: self?.image, factorReview: 2, label: self?.label)
+            UIView.animate(withDuration: 6, delay: 0.2, options: .curveEaseIn) {
+                self?.label?.alpha += 1
+            }
         }
-//        startRecording()
         createImage()
         createLabel()
         viewImage.bringSubviewToFront(imageView4 ?? viewImage)
@@ -68,7 +69,7 @@ class ReviewVC: UIViewController, RPPreviewViewControllerDelegate {
 
     @objc private func updateProgressTime() {
         stopRecording()
-        
+
     }
 
     private func stopRecording() {

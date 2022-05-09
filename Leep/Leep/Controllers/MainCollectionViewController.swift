@@ -7,26 +7,31 @@
 
 import UIKit
 
-class MainCollectionViewController: UICollectionViewController {
+final class MainCollectionViewController: UICollectionViewController {
 
     private var image: [ImageDetail] = []
     private let dataFetcherService: DataFetcherServiceProtocol = DataFetcherService()
 
-    private var imageView1: UIImageView?
-    private var imageView2: UIImageView?
-    private var imageView3: UIImageView?
-    private var imageView4: UIImageView?
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        if LandscapeManager.shared.isFirstLaunch {
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        let popupViewController = storyboard.instantiateViewController(withIdentifier: "Onboarding")
+    popupViewController.modalPresentationStyle = .automatic
+            self.present(popupViewController, animated: true, completion: nil)
+            LandscapeManager.shared.isFirstLaunch = true
+        } else {
+            print("Hello")
+        }
         dataFetcherService.fetchLocalCountry { [weak self] (image) in
             self?.image = image ?? []
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        collectionView.reloadData()
     }
-
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -40,14 +45,11 @@ class MainCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionViewCell
-
-        let image = image[indexPath.row]
-        cell.image = image
-        cell.viewImage.layer.cornerRadius = 5
-
-        CreatingImageForCell.shared.createImage(imageView: &imageView1, imageView1: &imageView2, imageView2: &imageView3, imageView3: &imageView4, cell: cell, image: cell.image, indexPath: indexPath)
         
-        Animations.shared.animateImage(imageView: imageView1, imageView1: imageView2, imageView2: imageView3, imageView3: imageView4, image: image, factorReview: 1, label: nil)
+        cell.image = image[indexPath.row]
+        cell.createImage()
+        cell.animateImage()
+
         return cell
     }
 
@@ -64,7 +66,6 @@ class MainCollectionViewController: UICollectionViewController {
         if let detailVC = segue.destination as? DetailVC,
             let image = sender as? ImageDetail {
             detailVC.image = image
-            
         }
     }
 }

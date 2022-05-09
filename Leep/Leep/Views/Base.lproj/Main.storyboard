@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hux-21-lNg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4qB-ns-9m3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -38,6 +38,24 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5E-tk-VFF">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n06-ok-VYE">
+                                                    <rect key="frame" x="-30" y="0.0" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ii0-7Q-Xn3">
+                                                    <rect key="frame" x="-30" y="8" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBD-KX-bn5">
+                                                    <rect key="frame" x="-30" y="0.0" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ua6-9i-D2K">
+                                                    <rect key="frame" x="-56" y="0.0" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
@@ -49,6 +67,10 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
+                                    <outlet property="imageView1" destination="n06-ok-VYE" id="yhk-lb-GNV"/>
+                                    <outlet property="imageView2" destination="Ii0-7Q-Xn3" id="tNw-Ky-w3f"/>
+                                    <outlet property="imageView3" destination="PBD-KX-bn5" id="szj-lq-6oB"/>
+                                    <outlet property="imageView4" destination="Ua6-9i-D2K" id="vz8-oi-4xh"/>
                                     <outlet property="viewImage" destination="t5E-tk-VFF" id="2yH-As-HM2"/>
                                 </connections>
                             </collectionViewCell>
@@ -58,14 +80,14 @@
                             <outlet property="delegate" destination="1IH-f3-bo8" id="fEg-cG-t2K"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Cnt-XO-URI"/>
+                    <navigationItem key="navigationItem" id="N8q-k4-k30"/>
                     <connections>
                         <segue destination="512-Ek-Yev" kind="show" identifier="ShowDetail" id="6Xn-T4-HeN"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsp-1V-i51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="82"/>
+            <point key="canvasLocation" x="2073.913043478261" y="81.696428571428569"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="emt-DX-j5K">
@@ -287,7 +309,7 @@
                     </connections>
                 </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1046" y="82"/>
+            <point key="canvasLocation" x="2865.217391304348" y="81.696428571428569"/>
         </scene>
         <!--ReviewVC-->
         <scene sceneID="YTE-eU-t7j">
@@ -301,7 +323,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-cL-1a9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -314,7 +336,7 @@
                             <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="trailing" secondItem="3Vy-Qr-fJq" secondAttribute="trailing" id="RTy-GK-oMf"/>
                             <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="bottom" secondItem="0ng-cL-1a9" secondAttribute="bottom" id="gUW-yy-JXj"/>
                             <constraint firstItem="3Vy-Qr-fJq" firstAttribute="leading" secondItem="qAJ-ZJ-9fX" secondAttribute="leading" id="jDe-Dj-hQf"/>
-                            <constraint firstItem="0ng-cL-1a9" firstAttribute="top" secondItem="qAJ-ZJ-9fX" secondAttribute="top" id="ot7-aa-yF3"/>
+                            <constraint firstItem="0ng-cL-1a9" firstAttribute="top" secondItem="qAJ-ZJ-9fX" secondAttribute="top" constant="-44" id="ot7-aa-yF3"/>
                             <constraint firstItem="0ng-cL-1a9" firstAttribute="leading" secondItem="qAJ-ZJ-9fX" secondAttribute="leading" id="w36-2R-zeN"/>
                         </constraints>
                     </view>
@@ -324,25 +346,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eV7-D5-xkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1875" y="82"/>
+            <point key="canvasLocation" x="3694.202898550725" y="81.696428571428569"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="J4f-lH-mjc">
+        <scene sceneID="dLX-aa-XsK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hux-21-lNg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4qB-ns-9m3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lit-6e-Zic">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uTw-JY-jXv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="1IH-f3-bo8" kind="relationship" relationship="rootViewController" id="5hi-X0-sTb"/>
+                        <segue destination="1IH-f3-bo8" kind="relationship" relationship="rootViewController" id="ntH-eT-JUJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FDK-Fw-YNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYB-LJ-dxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="82"/>
+            <point key="canvasLocation" x="1163.768115942029" y="81.696428571428569"/>
         </scene>
     </scenes>
     <resources>

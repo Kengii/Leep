@@ -8,15 +8,14 @@
 import UIKit
 import SwiftEntryKit
 
-class MyCustomAlertView: UIView {
+final class MyCustomAlertView: UIView {
 
     private var imageView: UIImageView!
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     private let actionButton = UIButton()
 
-//    private let totalHeight: CGFloat = 45
-    private let content: EKProperty.TextFieldContent
+    private var content: EKProperty.TextFieldContent
     private let textField = UITextField()
 
     public var text: String {
@@ -37,7 +36,7 @@ class MyCustomAlertView: UIView {
 
         setupElements()
         setupConstraints()
-        setupTextField(text: text)
+        setupTextField()
     }
 
     required init?(coder: NSCoder) {
@@ -45,11 +44,9 @@ class MyCustomAlertView: UIView {
     }
 
     @objc func actionButtonPressed() {
-        textField.text = text
-        print(textField.text)
+        text = textField.text ?? ""
         print(text)
         message.action()
-
     }
 }
 
@@ -66,9 +63,7 @@ extension MyCustomAlertView {
         imageView.imageContent = themeImage.image
     }
 
-    private func setupTextField(text: String?) {
-
-        textField.text = text
+    private func setupTextField() {
         textField.textFieldContent = content
         textField.delegate = content.delegate
         textField.backgroundColor = .lightGray

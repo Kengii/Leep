@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateDetailImage {
+final class CreateDetailImage {
 
     static let shared = CreateDetailImage()
 

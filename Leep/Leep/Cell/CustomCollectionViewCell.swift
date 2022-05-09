@@ -7,60 +7,85 @@
 
 import UIKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
+final class CustomCollectionViewCell: UICollectionViewCell {
 
-    var isStarted = 1
     var image: ImageDetail?
 
     @IBOutlet weak var viewImage: UIView!
+    @IBOutlet weak private var imageView1: UIImageView!
+    @IBOutlet weak private var imageView2: UIImageView!
+    @IBOutlet weak private var imageView3: UIImageView!
+    @IBOutlet weak private var imageView4: UIImageView!
 
     func createImage() {
 
-        if isStarted == 1 {
+        let height = UIScreen.main.bounds.height / 2.45
+        let width = UIScreen.main.bounds.width / 2.14
 
-            let height = UIScreen.main.bounds.height / 2.45
-            let width = UIScreen.main.bounds.width / 2.14
+        viewImage.frame.size.height = height
+        viewImage.frame.size.width = width
+        viewImage.layer.borderWidth = 0.5
+        viewImage.layer.borderColor = UIColor.red.cgColor
+        viewImage.clipsToBounds = true
+        viewImage.layer.shadowOpacity = 0.5
+        viewImage.layer.shadowOffset.width = 5
+        viewImage.layer.shadowOffset.height = 5
+        viewImage.layer.shadowColor = UIColor.black.cgColor
+        viewImage.layer.cornerRadius = 30
+    
+        
+        print(viewImage.frame.height)
 
-            viewImage.frame.size.height = height
-            viewImage.frame.size.width = width
-            print(viewImage.frame.height)
+        guard let image = image else { return }
 
+        imageView1.frame.size.height = height * (image.imageFactorForCell?.imageFactorForCellH1 ?? 1)
+        imageView1.frame.size.width = width * (image.imageFactorForCell?.imageFactorForCellW1 ?? 1)
+        imageView1.frame.origin.x = width * (image.imageFactorForCell?.imageFactorForCellX1 ?? 1)
+        imageView1.frame.origin.y = height * (image.imageFactor?.factorY1 ?? 1)
 
-            guard let image = image else { return }
+        imageView2.frame.size.height = height * (image.imageFactorForCell?.imageFactorForCellH2 ?? 1)
+        imageView2.frame.size.width = width * (image.imageFactorForCell?.imageFactorForCellW2 ?? 1)
+        imageView2.frame.origin.x = width * (image.imageFactorForCell?.imageFactorForCellX2 ?? 1)
+        imageView2.frame.origin.y = height * (image.imageFactor?.factorY2 ?? 1)
 
-            let imageView = UIImageView(frame: CGRect(x: width * (image.imageFactorForCell?.imageFactorForCellX1 ?? 1),
-                y: height * (image.imageFactor?.factorY1 ?? 1),
-                width: width * (image.imageFactorForCell?.imageFactorForCellW1 ?? 1),
-                height: height * (image.imageFactorForCell?.imageFactorForCellH1 ?? 1)))
+        imageView3.frame.size.height = height * (image.imageFactorForCell?.imageFactorForCellH3 ?? 1)
+        imageView3.frame.size.width = width * (image.imageFactorForCell?.imageFactorForCellW3 ?? 1)
+        imageView3.frame.origin.x = width * (image.imageFactorForCell?.imageFactorForCellX3 ?? 1)
+        imageView3.frame.origin.y = height * (image.imageFactor?.factorY3 ?? 1)
 
-            let imageView1 = UIImageView(frame: CGRect(x: width * (image.imageFactorForCell?.imageFactorForCellX2 ?? 1),
-                y: height * (image.imageFactor?.factorY2 ?? 1),
-                width: width * (image.imageFactorForCell?.imageFactorForCellW2 ?? 1),
-                height: height * (image.imageFactorForCell?.imageFactorForCellH2 ?? 1)))
+        imageView4.frame.size.height = height * (image.imageFactorForCell?.imageFactorForCellH4 ?? 1)
+        imageView4.frame.size.width = width * (image.imageFactorForCell?.imageFactorForCellW4 ?? 1)
+        imageView4.frame.origin.x = width * (image.imageFactor?.factorX4 ?? 1)
+        imageView4.frame.origin.y = height * (image.imageFactor?.factorY4 ?? 1)
 
-            let imageView2 = UIImageView(frame: CGRect(x: width * (image.imageFactorForCell?.imageFactorForCellX3 ?? 1),
-                y: height * (image.imageFactor?.factorY3 ?? 1),
-                width: width * (image.imageFactorForCell?.imageFactorForCellW3 ?? 1),
-                height: height * (image.imageFactorForCell?.imageFactorForCellH3 ?? 1)))
+        imageView1.image = UIImage(named: image.imageNames?.imageNamed1 ?? "")
+        imageView2.image = UIImage(named: image.imageNames?.imageNamed2 ?? "")
+        imageView3.image = UIImage(named: image.imageNames?.imageNamed3 ?? "")
+        imageView4.image = UIImage(named: image.imageNames?.imageNamed4 ?? "")
+    }
 
-            let imageView3 = UIImageView(frame: CGRect(x: width * (image.imageFactor?.factorX4 ?? 1),
-                y: height * (image.imageFactor?.factorY4 ?? 1),
-                width: width * (image.imageFactorForCell?.imageFactorForCellW4 ?? 1),
-                height: height * (image.imageFactorForCell?.imageFactorForCellH4 ?? 1)))
+    func animateImage() {
 
-            Animations.shared.animateImage(imageView: imageView, imageView1: imageView1, imageView2: imageView2, imageView3: imageView3, image: image, factorReview: 1, label: nil)
+        guard let animations = image else { return }
 
-            imageView.image = UIImage(named: image.imageNames?.imageNamed1 ?? "")
-            imageView1.image = UIImage(named: image.imageNames?.imageNamed2 ?? "")
-            imageView2.image = UIImage(named: image.imageNames?.imageNamed3 ?? "")
-            imageView3.image = UIImage(named: image.imageNames?.imageNamed4 ?? "")
+        UIView.animate(withDuration: 6, delay: 0, options: [.repeat], animations: {
+                self.imageView1.frame.size.height -= CGFloat(animations.imageAnimation?.imageHeight1Anim ?? 0.0)
+                self.imageView2.frame.size.height -= CGFloat(animations.imageAnimation?.imageHeight1Anim ?? 0.0)
+                self.imageView3.frame.size.height -= CGFloat(animations.imageAnimation?.imageHeight1Anim ?? 0.0)
+                self.imageView4.frame.size.height -= CGFloat(animations.imageAnimation?.imageHeight1Anim ?? 0.0)
+                self.imageView1.frame.size.width += CGFloat(animations.imageAnimation?.imageWidth1Anim ?? 0)
+                self.imageView2.frame.size.width += CGFloat(animations.imageAnimation?.imageWidth2Anim ?? 0)
+                self.imageView3.frame.size.width += CGFloat(animations.imageAnimation?.imageWidth3Anim ?? 0)
 
-            viewImage.addSubview(imageView)
-            viewImage.addSubview(imageView1)
-            viewImage.addSubview(imageView2)
-            viewImage.addSubview(imageView3)
+                self.imageView1.frame.origin.x += CGFloat(animations.imageAnimation?.imageAlpha1Anim ?? 0)
+                self.imageView2.frame.origin.x += CGFloat(animations.imageAnimation?.imageAlpha2Anim ?? 0)
+                self.imageView3.frame.origin.x += CGFloat(animations.imageAnimation?.imageAlpha3Anim ?? 0)
 
-            isStarted += 1
-        }
+                self.imageView1.transform = CGAffineTransform(scaleX: CGFloat(animations.imageAnimation?.imageScale1 ?? 1), y: CGFloat(animations.imageAnimation?.imageScale1 ?? 1))
+
+                self.imageView1.transform = CGAffineTransform(rotationAngle: CGFloat(animations.imageAnimation?.imageScale2 ?? 0))
+
+                self.imageView1.layer.transform = CATransform3DMakeRotation(CGFloat(animations.imageAnimation?.angel ?? 0), 0, CGFloat(animations.imageAnimation?.imageScale3 ?? 0), 0)
+            })
     }
 }
