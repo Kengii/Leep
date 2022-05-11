@@ -14,4 +14,4 @@ The application includes three view controllers:
 
 ## Main screen
 
-[Main](Readme_assets/Main.gif)
+![Main](Readme_assets/Main.gif)
