@@ -24,7 +24,7 @@ final class CreateAlert {
     }
 
     private func setupAAttributes() -> EKAttributes {
-        var attributes = EKAttributes.centerFloat
+        var attributes = EKAttributes.topFloat
         attributes.displayDuration = .infinity
         attributes.screenBackground = .color(color: .init(light: UIColor(white: 100.0 / 255.0, alpha: 0.3), dark: UIColor(white: 50.0 / 255.0, alpha: 0.3)))
         attributes.shadow = .active(

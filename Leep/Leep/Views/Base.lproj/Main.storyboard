@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ccr-Ms-S36">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Ccr-Ms-S36">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGround" id="4IM-bt-goa">
                             <rect key="frame" x="0.0" y="-88" width="414" height="896"/>
@@ -30,7 +30,7 @@
                         </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ZLP-Mt-uIx" customClass="CustomCollectionViewCell" customModule="Leep" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <rect key="frame" x="5" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WxQ-y1-9y7">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -261,7 +261,7 @@
                             <barButtonItem systemItem="play" id="al6-hL-KiZ">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="OKs-kE-eUc" kind="presentation" id="jFv-Pw-l1r"/>
+                                    <segue destination="OKs-kE-eUc" kind="presentation" modalPresentationStyle="fullScreen" id="jFv-Pw-l1r"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="pencil.tip.crop.circle" catalog="system" id="EjM-FR-6wf">
@@ -316,14 +316,14 @@
             <objects>
                 <viewController id="OKs-kE-eUc" customClass="ReviewVC" customModule="Leep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CCe-wy-vcF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGround" translatesAutoresizingMaskIntoConstraints="NO" id="3Vy-Qr-fJq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-cL-1a9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -332,9 +332,9 @@
                         <constraints>
                             <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="trailing" secondItem="0ng-cL-1a9" secondAttribute="trailing" id="9El-ID-YdG"/>
                             <constraint firstItem="3Vy-Qr-fJq" firstAttribute="top" secondItem="qAJ-ZJ-9fX" secondAttribute="top" constant="-44" id="ILk-O2-25v"/>
-                            <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="bottom" secondItem="3Vy-Qr-fJq" secondAttribute="bottom" id="NUb-OG-hv5"/>
+                            <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="bottom" secondItem="3Vy-Qr-fJq" secondAttribute="bottom" constant="-34" id="NUb-OG-hv5"/>
                             <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="trailing" secondItem="3Vy-Qr-fJq" secondAttribute="trailing" id="RTy-GK-oMf"/>
-                            <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="bottom" secondItem="0ng-cL-1a9" secondAttribute="bottom" id="gUW-yy-JXj"/>
+                            <constraint firstItem="qAJ-ZJ-9fX" firstAttribute="bottom" secondItem="0ng-cL-1a9" secondAttribute="bottom" constant="-34" id="gUW-yy-JXj"/>
                             <constraint firstItem="3Vy-Qr-fJq" firstAttribute="leading" secondItem="qAJ-ZJ-9fX" secondAttribute="leading" id="jDe-Dj-hQf"/>
                             <constraint firstItem="0ng-cL-1a9" firstAttribute="top" secondItem="qAJ-ZJ-9fX" secondAttribute="top" constant="-44" id="ot7-aa-yF3"/>
                             <constraint firstItem="0ng-cL-1a9" firstAttribute="leading" secondItem="qAJ-ZJ-9fX" secondAttribute="leading" id="w36-2R-zeN"/>

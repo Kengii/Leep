@@ -113,6 +113,7 @@ final class ReviewVC: UIViewController, RPPreviewViewControllerDelegate {
             y: height * (image.imageFactor?.factorY1 ?? 1),
             width: width * (image.imageFactorForCell?.imageFactorForCellW1 ?? 1),
             height: height * (image.imageFactorForCell?.imageFactorForCellH1 ?? 1)))
+        print(imageView?.frame.origin.y)
 
         imageView1 = UIImageView(frame: CGRect(x: width * (image.imageFactorForCell?.imageFactorForCellX2 ?? 1),
             y: height * (image.imageFactor?.factorY2 ?? 1),

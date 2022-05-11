@@ -144,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				7F5214FB2822E0B900CA1143 /* ModelImageDetail.swift */,
-				7F5215192822E7B500CA1143 /* ModelLine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +214,7 @@
 		7F5215142822E75100CA1143 /* DrawServices */ = {
 			isa = PBXGroup;
 			children = (
+				7FA72E1C282ABD5500C9C8AF /* Model */,
 				7F5215152822E76400CA1143 /* Draw.swift */,
 				7F5215172822E79100CA1143 /* DrawAsImage.swift */,
 			);
@@ -247,6 +247,14 @@
 				7F52153C282579D000CA1143 /* LandScapeManager.swift */,
 			);
 			path = OnboardingManager;
+			sourceTree = "<group>";
+		};
+		7FA72E1C282ABD5500C9C8AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F5215192822E7B500CA1143 /* ModelLine.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
