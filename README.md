@@ -1,11 +1,11 @@
 # Leep
 Leep
 
-##
+## Objective
 
 The application was created so that after choosing an animation template, you can upload your photos and convert them into videos. Add text and/or drawing on photo
 
-##
+## Summary
 
 The application includes three view controllers: 
 1. Main screen type: CollectionView, 
@@ -15,3 +15,25 @@ The application includes three view controllers:
 ## Main screen
 
 ![Main](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/Main.gif)
+
+## Adding a photo
+
+![]()
+
+## Adding a text 
+
+![]()
+
+## Draw
+
+![]()
+
+## Save Video
+
+![]()
+
+## Share
+
+![]()
+
+
