@@ -14,4 +14,4 @@ The application includes three view controllers:
 
 ## Main screen
 
-![Main](Readme_assets/Main.gif)
+![Main](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/Main.gif)
