@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "onboarder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JemAlvarez/onboarder",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b35003b8b0018db2840b8bca8688979e80ee51d1"
+      }
+    },
+    {
+      "identity" : "swiftentrykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/huri000/SwiftEntryKit",
+      "state" : {
+        "revision" : "5ad36cccf0c4b9fea32f4e9b17a8e38f07563ef0",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

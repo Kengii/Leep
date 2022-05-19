@@ -1,0 +1,237 @@
+
+[
+{
+"id": 1,
+"imageNames": {
+"imageNamed1": "1",
+"imageNamed2": "2",
+"imageNamed3": "3",
+"imageNamed4": "4",
+},
+"imageAnimation": {
+"imageHeight1Anim": -200,
+"imageHeight2Anim": 200,
+"imageHeight3Anim": 200,
+"imageHeight4Anim": 200,
+},
+"imageFactor" : {
+"factorX1": 0,
+"factorX3": 0,
+"factorX2": 0.5,
+"factorX4": 0.5,
+"factorY1": 0,
+"factorY2": 0,
+"factorY3": 0.440,
+"factorY4": 0.440,
+"factorH1": 0.44,
+"factorH2": 0.44,
+"factorH3": 0.44,
+"factorH4": 0.44,
+"factorW1": 0.5,
+"factorW2": 0.5,
+"factorW3": 0.5,
+"factorW4": 0.5,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 0.05,
+"imageFactorForCellH2": 0.05,
+"imageFactorForCellH3": 0.05,
+"imageFactorForCellH4": 0.05,
+"imageFactorForCellW1": 0.5,
+"imageFactorForCellW2": 0.5,
+"imageFactorForCellW3": 0.5,
+"imageFactorForCellW4": 0.5,
+"imageFactorForCellX1": 0,
+"imageFactorForCellX2": 0.5,
+"imageFactorForCellX3": 0,
+},
+},
+{
+"id": 2,
+"imageNames": {
+"imageNamed1": "5",
+},
+"imageAnimation": {
+"imageHeight1Anim": -250,
+"imagePosYAn": 20,
+},
+"imageFactor" : {
+"factorX1": 0,
+"factorY1": 0.05,
+"factorH1": 0.7,
+"factorW1": 1,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 0.1,
+"imageFactorForCellW1": 1,
+"imageFactorForCellX1": 0
+},
+},
+{
+"id": 3,
+"imageNames": {
+"imageNamed1": "6",
+"imageNamed2": "7",
+"imageNamed3": "8",
+},
+"imageAnimation": {
+"imageWidth1Anim": 250,
+"imageWidth2Anim": -250,
+"imageWidth3Anim": 250,
+},
+"imageFactor" : {
+"factorX1": 0,
+"factorX2": 0,
+"factorX3": 0,
+"factorY1": 0,
+"factorY2": 0.33,
+"factorY3": 0.66,
+"factorH1": 0.33,
+"factorH2": 0.33,
+"factorH3": 0.3,
+"factorW1": 1,
+"factorW2": 1,
+"factorW3": 1,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 0.33,
+"imageFactorForCellH2": 0.33,
+"imageFactorForCellH3": 0.33,
+"imageFactorForCellW1": 0.03,
+"imageFactorForCellW2": 0.03,
+"imageFactorForCellW3": 0.03,
+"imageFactorForCellX1": 0,
+"imageFactorForCellX2": 1,
+"imageFactorForCellX3": 0,
+},
+},
+{
+"id": 4,
+"imageNames": {
+"imageNamed1": "9",
+"imageNamed2": "10",
+"imageNamed3": "11",
+},
+"imageAnimation": {
+"imageAlpha1Anim": 100,
+"imageAlpha2Anim": 100,
+"imageAlpha3Anim": 100,
+},
+"imageFactor" : {
+"factorX1": 0.25,
+"factorX2": 0.25,
+"factorX3": 0.25,
+"factorY1": 0.03,
+"factorY2": 0.305,
+"factorY3": 0.58,
+"factorH1": 0.27,
+"factorH2": 0.27,
+"factorH3": 0.27,
+"factorW1": 0.5,
+"factorW2": 0.5,
+"factorW3": 0.5,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 0.27,
+"imageFactorForCellH2": 0.27,
+"imageFactorForCellH3": 0.27,
+"imageFactorForCellW1": 0.5,
+"imageFactorForCellW2": 0.5,
+"imageFactorForCellW3": 0.5,
+"imageFactorForCellX1": -0.05,
+"imageFactorForCellX2": -0.05,
+"imageFactorForCellX3": -0.05,
+},
+},
+{
+"id": 5,
+"imageNames": {
+"imageNamed1": "12",
+},
+"imageAnimation": {
+"imageScale1": 0.5,
+},
+"imageFactor" : {
+"factorX1": 0,
+"factorY1": 0.05,
+"factorH1": 0.70,
+"factorW1": 1,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 1,
+"imageFactorForCellW1": 1,
+"imageFactorForCellX1": 0
+},
+},
+{
+"id": 6,
+"imageNames": {
+"imageNamed1": "16",
+},
+"imageAnimation": {
+"imageScale2": 2,
+},
+"imageFactor" : {
+"factorX1": 0,
+"factorY1": 0.05,
+"factorH1": 0.70,
+"factorW1": 1,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 1,
+"imageFactorForCellW1": 1,
+"imageFactorForCellX1": 0
+},
+},
+{
+"id": 7,
+"imageNames": {
+"imageNamed1": "17",
+},
+"imageAnimation": {
+"imageScale3": 2,
+    "imageScale1": 0,
+},
+"imageFactor" : {
+"factorX1": 0,
+"factorY1": 0.05,
+"factorH1": 0.70,
+"factorW1": 1,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 1,
+"imageFactorForCellW1": 1,
+"imageFactorForCellX1": 0
+},
+},
+{
+"id": 8,
+"imageNames": {
+"imageNamed1": "13",
+"imageNamed2": "14",
+},
+"imageAnimation": {
+    "imageWidth1Anim": 377,
+    "imageWidth2Anim": -377,
+    "angel": 3.14,
+},
+"imageFactor" : {
+    "factorX1": 0,
+    "factorY1": 0,
+    "factorH1": 0.8,
+    "factorW1": 0.5,
+    "factorX2": 0.5,
+    "factorY2": 0,
+    "factorH2": 0.9,
+    "factorW2": 0.5,
+},
+"imageFactorForCell": {
+"imageFactorForCellH1": 1,
+"imageFactorForCellH2": 1,
+"imageFactorForCellW1": 0,
+"imageFactorForCellW2": 1,
+"imageFactorForCellX1": 0,
+"imageFactorForCellX2": 0
+},
+},
+]
