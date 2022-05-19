@@ -60,7 +60,7 @@ final class ReviewVC: UIViewController, RPPreviewViewControllerDelegate {
         label?.font = label?.font.withSize(35)
         label?.textAlignment = .center
         label?.shadowColor = .darkGray
-        label?.shadowOffset.height = 3
+        label?.shadowOffset.height = 2
         label?.shadowOffset.width = 2
         viewImage.bringSubviewToFront(label ?? viewImage)
         viewImage.addSubview(label ?? viewImage)
@@ -113,7 +113,6 @@ final class ReviewVC: UIViewController, RPPreviewViewControllerDelegate {
             y: height * (image.imageFactor?.factorY1 ?? 1),
             width: width * (image.imageFactorForCell?.imageFactorForCellW1 ?? 1),
             height: height * (image.imageFactorForCell?.imageFactorForCellH1 ?? 1)))
-        print(imageView?.frame.origin.y)
 
         imageView1 = UIImageView(frame: CGRect(x: width * (image.imageFactorForCell?.imageFactorForCellX2 ?? 1),
             y: height * (image.imageFactor?.factorY2 ?? 1),

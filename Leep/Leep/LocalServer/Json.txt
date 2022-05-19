@@ -9,10 +9,10 @@
 "imageNamed4": "4",
 },
 "imageAnimation": {
-"imageHeight1Anim": -222,
-"imageHeight2Anim": 222,
-"imageHeight3Anim": 222,
-"imageHeight4Anim": 222,
+"imageHeight1Anim": -200,
+"imageHeight2Anim": 200,
+"imageHeight3Anim": 200,
+"imageHeight4Anim": 200,
 },
 "imageFactor" : {
 "factorX1": 0,
