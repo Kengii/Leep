@@ -9,7 +9,7 @@ import UIKit
 import Onboarder
 import SwiftUI
 
-class ViewController: UIViewController {
+class OnboardingVC: UIViewController {
 
     private let pages: [OBPage] = [
         OBPage(color: .white, imageName: "on", label: ("Добро пожаловать", "Спасибо что выбрали нас! Пройдите обучение!")),

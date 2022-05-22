@@ -21,20 +21,9 @@ final class CustomCollectionViewCell: UICollectionViewCell {
 
         let height = UIScreen.main.bounds.height / 2.45
         let width = UIScreen.main.bounds.width / 2.14
-
-        viewImage.frame.size.height = height
-        viewImage.frame.size.width = width
-        viewImage.layer.borderWidth = 0.5
-        viewImage.layer.borderColor = UIColor.red.cgColor
-        viewImage.clipsToBounds = true
-        viewImage.layer.shadowOpacity = 0.5
-        viewImage.layer.shadowOffset.width = 5
-        viewImage.layer.shadowOffset.height = 5
-        viewImage.layer.shadowColor = UIColor.black.cgColor
-        viewImage.layer.cornerRadius = 30
-    
         
-        print(viewImage.frame.height)
+            viewImage.frame.size.height = height
+            viewImage.frame.size.width = width
 
         guard let image = image else { return }
 
@@ -87,5 +76,16 @@ final class CustomCollectionViewCell: UICollectionViewCell {
 
                 self.imageView1.layer.transform = CATransform3DMakeRotation(CGFloat(animations.imageAnimation?.angel ?? 0), 0, CGFloat(animations.imageAnimation?.imageScale3 ?? 0), 0)
             })
+    }
+    
+    func borderAndShadowCell() {
+        viewImage.layer.borderWidth = 0.5
+        viewImage.layer.borderColor = UIColor.red.cgColor
+        viewImage.clipsToBounds = true
+        viewImage.layer.shadowOpacity = 0.5
+        viewImage.layer.shadowOffset.width = 5
+        viewImage.layer.shadowOffset.height = 5
+        viewImage.layer.shadowColor = UIColor.black.cgColor
+        viewImage.layer.cornerRadius = 30
     }
 }
