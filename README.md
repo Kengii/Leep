@@ -1,6 +1,7 @@
 # Leep
 Leep
-![](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/Logo.png)
+![](https://github.com/Kengii/Leep/blob/main/Readme%20assets/Logo.png)
+
 
 ## Objective
 
@@ -15,33 +16,33 @@ The application includes three view controllers:
 
 ## Main screen
 
-![Main](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/Main.gif)
+![Main](https://github.com/Kengii/Leep/blob/main/Readme%20assets/Main.gif)
 
 ## Adding a photo
 
 ### Here you can add your photos
 
-![](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/AddingPhoto.png)
+![](https://github.com/Kengii/Leep/blob/main/Readme%20assets/AddingPhoto.png)
 
 ## Adding a text 
 
 ### By clicking on the letter in the upper right corner, you can add your text to the screen
 
-![](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/AddingText.png)
+![](https://github.com/Kengii/Leep/blob/main/Readme%20assets/AddingText.png)
 
 ## Draw
 
 ### By clicking on the pen in the upper right corner, you can draw something on the screen
 
-![](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/Draw.png)
+![](https://github.com/Kengii/Leep/blob/main/Readme%20assets/Draw.png)
 
 ## Save Video
 
-![](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/Save.jpeg)
+![](https://github.com/Kengii/Leep/blob/main/Readme%20assets/Save.jpeg)
 
 ## Share
 
-![](https://github.com/Kengii/Leep/blob/Dev/Readme%20assets/Share.jpeg)
+![](https://github.com/Kengii/Leep/blob/main/Readme%20assets/Share.jpeg)
 
 ## Backend
 
