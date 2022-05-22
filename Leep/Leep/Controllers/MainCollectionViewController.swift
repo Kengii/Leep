@@ -49,6 +49,7 @@ final class MainCollectionViewController: UICollectionViewController {
         cell.image = image[indexPath.row]
         cell.createImage()
         cell.animateImage()
+        cell.borderAndShadowCell()
 
         return cell
     }
